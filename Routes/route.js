@@ -38,21 +38,8 @@ function generateUniqueNumber() {
   return uniqueNumber;
 }
 
-// const storage = multer.diskStorage({
-//   destination:function (req,file,cb){
-//     cb(null,"uploads/");
-//   },
-//   filename: function (req,file,cb){
-//     const uniqueSuffix = Date.now();
-//     cb(null,uniqueSuffix+file.originalname );
-//   },
-// });
-
-
-// const upload = multer({storage:storage});
-// Route to add Aadhar card
 router.post("/addAadhar", upload.fields([{ name: 'profile' }, { name: 'fingerprint' }]), async (req, res) => {
-  console.log("backend ", req.body);
+  // console.log("backend ", req.body);
   try {
       const {
           name,
